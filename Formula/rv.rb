@@ -1,25 +1,25 @@
 class Rv < Formula
   desc "Raeva CLI - lockfile companion for Maven projects"
   homepage "https://raeva.io"
-  version "0.2.0"
+  version "0.3.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/raeva-io/raeva/releases/download/v0.2.0/rv-cli-aarch64-apple-darwin.tar.gz"
-      sha256 "f7fb421ee78bad9bd78fee6d462c95bb5d31468a991ee06f453637982eeeb3e0"
+      url "https://github.com/raeva-io/raeva/releases/download/v0.3.0/rv-cli-aarch64-apple-darwin.tar.gz"
+      sha256 "6502572f40994a662f271947533ca0a29893ee150412bfe1f635c13bfddb6ae8"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/raeva-io/raeva/releases/download/v0.2.0/rv-cli-x86_64-apple-darwin.tar.gz"
-      sha256 "059a0301baabdc22bff3473bd1db34ba04fd277f2a78164e85e5c3c79b4f1019"
+      url "https://github.com/raeva-io/raeva/releases/download/v0.3.0/rv-cli-x86_64-apple-darwin.tar.gz"
+      sha256 "81b1b7bcefcb9e6c580ca3d3e37032370d573b2b880117f4b6466a102859d206"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/raeva-io/raeva/releases/download/v0.2.0/rv-cli-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "676fe15268efcae657cb503c94353208c92009b0089931d0d6c26c1529059442"
+      url "https://github.com/raeva-io/raeva/releases/download/v0.3.0/rv-cli-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "8d2e11d230a6bd5c964134739e6fc4fca8d82c1fdcec168f3b5b8c71e3b718b8"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/raeva-io/raeva/releases/download/v0.2.0/rv-cli-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "41a5f80cf1b8824310af662636b357fc2a09124e443385414368e49d77d2180f"
+      url "https://github.com/raeva-io/raeva/releases/download/v0.3.0/rv-cli-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "d248e308a39be35e1bd4cd9e5e7cff803b56e414b9fe1f37e3de26a6b7a8e999"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
@@ -48,10 +48,18 @@ class Rv < Formula
   end
 
   def install
-    bin.install "rv" if OS.mac? && Hardware::CPU.arm?
-    bin.install "rv" if OS.mac? && Hardware::CPU.intel?
-    bin.install "rv" if OS.linux? && Hardware::CPU.arm?
-    bin.install "rv" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "rv"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "rv"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "rv"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "rv"
+    end
 
     install_binary_aliases!
 
