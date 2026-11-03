@@ -1,25 +1,25 @@
 class Raeva < Formula
   desc "Raeva CLI - lockfile companion for Maven projects"
   homepage "https://raeva.io"
-  version "0.5.1"
+  version "0.5.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/raeva-io/raeva/releases/download/v0.5.1/raeva-aarch64-apple-darwin.tar.gz"
-      sha256 "7b5a97db6acd9efa2e6a55bd66749cb4c753b7927a83822cfe38092b027acbae"
+      url "https://github.com/raeva-io/raeva/releases/download/v0.5.2/raeva-aarch64-apple-darwin.tar.gz"
+      sha256 "8eef91f31abb1f1a46628352a08d4b4196ecff073826e3baab7b62c1e48207e4"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/raeva-io/raeva/releases/download/v0.5.1/raeva-x86_64-apple-darwin.tar.gz"
-      sha256 "b049a360d1b64a5998d237807fc546f63e2933e7c31829a684ca9a023cfcaed3"
+      url "https://github.com/raeva-io/raeva/releases/download/v0.5.2/raeva-x86_64-apple-darwin.tar.gz"
+      sha256 "a265829de2bc4280e2dac1fb43c3c60b49a8dd54ce3c347f9b324856536d39b1"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/raeva-io/raeva/releases/download/v0.5.1/raeva-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "999afdb695d195e7c75916510fabdb367c72a3b4cd942a4ef2abbe31ffab43c9"
+      url "https://github.com/raeva-io/raeva/releases/download/v0.5.2/raeva-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "37b0e8b9a4fcf81645363cddcf5692b8992fe4572d82ae8916d268e9c67dc6fc"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/raeva-io/raeva/releases/download/v0.5.1/raeva-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "3a9aecc6f0f730e07b4e8eb1d8ec3c73abeb595ae64817dc7316edf02831a4b9"
+      url "https://github.com/raeva-io/raeva/releases/download/v0.5.2/raeva-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "2fb292902ebb2e62e7bf8d5277a1c64a281fdf55ae7a61b005f89c3ac73613ad"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
